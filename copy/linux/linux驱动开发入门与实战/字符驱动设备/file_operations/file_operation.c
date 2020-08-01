@@ -1,4 +1,5 @@
 /* file operation struct */
+/* 伪代码 */
 
 static const struct file_operations xxx_fops = {
     .ower = THIS_MODLE,
