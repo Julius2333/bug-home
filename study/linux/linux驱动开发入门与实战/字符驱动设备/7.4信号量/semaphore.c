@@ -22,21 +22,14 @@ static inline void sema_init(struct semaphore *sem, int val);
 void down(struct semaphore *sem)
 
 /* 可被唤醒 */
-int dowm_interruptible(struct semaphore *sem)
+int dowm_interruptible(struct semaphore *sem);
 /* 如果信号量被唤醒会返回非零值 */
 if (dowm_interruptible(&sem)) {
     return -ERESTARTSYS;
 }
 
 /* 当使用完信号量以后应该使用up()释放 */
-void up(struct semaphore *sem)
-
-
-
-
-
-
-
+void up(struct semaphore *sem);
 
 /* 使用的模板 */
 struct semaphore sem;
